@@ -24,7 +24,7 @@ function App() {
         <h1 style={{ fontSize: '3rem', letterSpacing: '0.5rem', marginBottom: '1rem' }}>
           STARSHIP
         </h1>
-        <p style={{ opacity: 0.6 }}>Pranav Karthik — Portfolio (Coming Soon)</p>
+        <p style={{ opacity: 0.6 }}>Pranav Karthik's Portfolio (Coming Soon)</p>
       </div>
     </>
   )
