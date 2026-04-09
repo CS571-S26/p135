@@ -1,33 +1,26 @@
-import { Canvas } from '@react-three/fiber'
-import { Stars, OrbitControls } from '@react-three/drei'
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import StarField from './components/StarField';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
     <>
-      {/* 3D Scene */}
-      <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
-        <ambientLight intensity={0.3} />
-        <pointLight position={[5, 5, 5]} intensity={1} />
-        <Stars radius={100} depth={50} count={2000} factor={4} fade speed={1} />
-        <OrbitControls enableZoom={false} />
-      </Canvas>
-
-      {/* Overlay */}
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        textAlign: 'center',
-        pointerEvents: 'none',
-      }}>
-        <h1 style={{ fontSize: '3rem', letterSpacing: '0.5rem', marginBottom: '1rem' }}>
-          STARSHIP
-        </h1>
-        <p style={{ opacity: 0.6 }}>Pranav Karthik's Portfolio (Coming Soon)</p>
-      </div>
+      <StarField />
+      <NavBar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
