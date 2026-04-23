@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import ProjectCard from '../components/ProjectCard';
+import MissionConsole from '../components/MissionConsole';
 import projects from '../data/projects';
 
 function ProjectsPage() {
@@ -15,6 +16,7 @@ function ProjectsPage() {
             </Col>
           ))}
         </Row>
+        <MissionConsole projects={projects} />
       </Container>
     </div>
   );
