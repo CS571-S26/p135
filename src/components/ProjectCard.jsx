@@ -1,11 +1,13 @@
 import { Card, Badge } from 'react-bootstrap';
 
 function ProjectCard({ project }) {
+  const statusClass = project.status === 'Complete' ? 'success' : 'warning';
+
   return (
-    <Card className="project-card h-100">
+    <Card className="project-card h-100 reveal reveal-delay-1">
       <Card.Body>
         <div className="project-status">
-          <Badge bg={project.status === 'Complete' ? 'success' : 'warning'}>
+          <Badge bg={statusClass}>
             {project.status}
           </Badge>
         </div>
@@ -13,7 +15,7 @@ function ProjectCard({ project }) {
         <Card.Text className="project-desc">{project.description}</Card.Text>
         <div className="project-tech">
           {project.tech.map((t) => (
-            <Badge key={t} pill bg="dark" className="me-1 mb-1 tech-badge">
+            <Badge key={t} pill className="me-1 mb-1 tech-badge">
               {t}
             </Badge>
           ))}

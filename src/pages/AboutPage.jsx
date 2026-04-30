@@ -1,15 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import SkillBadge from '../components/SkillBadge';
-import skills from '../data/skills';
+import ConstellationLedger from '../components/ConstellationLedger';
+import TechRadar from '../components/TechRadar';
 
 function AboutPage() {
   return (
     <div className="page about-page">
       <Container>
-        <Row>
+        <Row className="g-4">
           <Col md={6}>
-            <h2 className="page-heading">Crew Manifest</h2>
-            <div className="crew-card">
+            <h2 className="page-heading reveal">Crew Manifest</h2>
+            <div className="crew-card glass-surface reveal reveal-delay-1">
               <div className="crew-avatar">PK</div>
               <h3 className="crew-name">Pranav Karthik</h3>
               <p className="crew-role">Captain &amp; Chief Engineer</p>
@@ -22,14 +22,10 @@ function AboutPage() {
             </div>
           </Col>
           <Col md={6}>
-            <h2 className="page-heading">Systems &amp; Proficiencies</h2>
-            <div className="skills-list">
-              {skills.map((s) => (
-                <SkillBadge key={s.name} name={s.name} level={s.level} />
-              ))}
-            </div>
+            <TechRadar />
           </Col>
         </Row>
+        <ConstellationLedger />
       </Container>
     </div>
   );

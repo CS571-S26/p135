@@ -7,7 +7,6 @@ function Footer() {
         <p className="footer-text">
           ✦ STARSHIP &mdash; Pranav Karthik &copy; {new Date().getFullYear()}
         </p>
-        <p className="footer-sub">Transmission from sector CS-571</p>
       </Container>
     </footer>
   );

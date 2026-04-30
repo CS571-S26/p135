@@ -16,21 +16,21 @@ function NavBar() {
             <Nav.Link
               as={Link}
               to="/"
-              className={location.pathname === '/' ? 'active' : ''}
+              className={`nav-link-wrap ${location.pathname === '/' ? 'active' : ''}`}
             >
               Bridge
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/projects"
-              className={location.pathname === '/projects' ? 'active' : ''}
+              className={`nav-link-wrap ${location.pathname === '/projects' ? 'active' : ''}`}
             >
               Missions
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/about"
-              className={location.pathname === '/about' ? 'active' : ''}
+              className={`nav-link-wrap ${location.pathname === '/about' ? 'active' : ''}`}
             >
               Crew
             </Nav.Link>
